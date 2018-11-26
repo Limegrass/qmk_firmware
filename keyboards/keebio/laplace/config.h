@@ -35,6 +35,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* key matrix pins */
 #define MATRIX_ROW_PINS {D3, F4, D2, F5, D7, B4, D0, E6}
 #define MATRIX_COL_PINS {D1, B5, F7, B1, B3, B2, B6}
+/* Originals (My arduino is broken so I have custom pins) */
+/* #define MATRIX_ROW_PINS {D3, F4, D2, F5, D7, B4, C6, E6} */
+/* #define MATRIX_COL_PINS {D1, F6, F7, B1, B3, B2, B6} */
 
 /* WS2812 RGB LED */
 #define RGB_DI_PIN D4
@@ -44,7 +47,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
-#define TAPPING_TERM 200
+#define TAPPING_TERM 100
+/* #define TAPPING_TERM 200 */
 
 /* key combination for magic key command */
 #define IS_COMMAND() ( \
