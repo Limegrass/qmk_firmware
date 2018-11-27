@@ -50,17 +50,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     ,
     [_FN1] = LAYOUT(
-            KC_GRAVE , _______     , _______ , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , _______ , _______ , _______ , KC_HOME    , KC_END  , KC_PGUP , KC_PGDN , KC_DEL ,
-            KC_LCTL  , KC_RCTL     , _______ , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , _______ , KC_LEFT , KC_DOWN , KC_UP      , KC_RGHT , KC_INS  , KC_ENT  ,
-            KC_LSFT  , KC_RSFT     , _______ , KC_LBRC             , KC_RBRC              , _______ , _______ , _______ , KC_PSCREEN , KC_MUTE , KC_VOLD , KC_VOLU ,
-            _______  , KC_CAPSLOCK , KC_LGUI , KC_LALT             , _______              , KC_MPLY , KC_MSTP , _______ , KC_MPRV    , KC_MNXT
+            KC_GRAVE , _______ , _______ , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , _______ , _______ , _______ , KC_HOME    , KC_END  , KC_PGUP , KC_PGDN , KC_DEL ,
+            KC_LCTL  , KC_RCTL , _______ , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , _______ , KC_LEFT , KC_DOWN , KC_UP      , KC_RGHT , KC_INS  , KC_ENT  ,
+            KC_LSFT  , KC_RSFT , _______ , KC_LBRC             , KC_RBRC              , _______ , _______ , _______ , KC_PSCREEN , KC_MUTE , KC_VOLD , KC_VOLU ,
+            _______  , _______ , KC_LGUI , KC_LALT             , _______              , KC_MPLY , KC_MSTP , _______ , KC_MPRV    , KC_MNXT
             )
 
     ,
     [_FN2] = LAYOUT(
-            KC_TAB   , KC_1       , KC_2       , KC_3       , KC_4       , KC_5       , KC_6       , KC_7       , KC_8       , KC_9       , KC_0       , KC_MINS       , KC_EQL ,
-            KC_LCTL  , LGUI(KC_1) , LGUI(KC_2) , LGUI(KC_3) , LGUI(KC_4) , LGUI(KC_5) , LGUI(KC_6) , LGUI(KC_7) , LGUI(KC_8) , LGUI(KC_9) , LGUI(KC_0) , LGUI(KC_MINS) ,
-            KC_LSFT  , _______    , _______    , _______    , _______    , _______    , _______    , _______    , _______    , _______    , KC_PAST    , KC_SLSH       ,
+            KC_TAB   , KC_1       , KC_2       , KC_3       , KC_4       , KC_5       , KC_6       , KC_7       , KC_8       , KC_9       , KC_0       , KC_MINS , KC_EQL ,
+            KC_LCTL  , LGUI(KC_1) , LGUI(KC_2) , LGUI(KC_3) , LGUI(KC_4) , LGUI(KC_5) , LGUI(KC_6) , LGUI(KC_7) , LGUI(KC_8) , LGUI(KC_9) , LGUI(KC_0) , KC_ENT  ,
+            KC_LSFT  , _______    , _______    , _______    , _______    , _______    , _______    , _______    , _______    , _______    , KC_PAST    , KC_RSFT,
             XXXXXXX  , _______    , KC_LGUI    , KC_LALT    , _______    , _______    , _______    , _______    , _______    , _______
             )
 
@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_ESCAPE , KC_F1       , KC_F2       , KC_F3       , KC_F4       , KC_F5       , KC_F6       , KC_F7       , KC_F8       , KC_F9       , KC_F10       , KC_F11       , KC_F12 ,
             KC_LCTL   , LCTL(KC_F1) , LCTL(KC_F2) , LCTL(KC_F3) , LCTL(KC_F4) , LCTL(KC_F5) , LCTL(KC_F6) , LCTL(KC_F7) , LCTL(KC_F8) , LCTL(KC_F9) , LCTL(KC_F10) , LCTL(KC_F11) ,
             KC_LSFT   , LSFT(KC_F1) , LSFT(KC_F2) , LSFT(KC_F3) , LSFT(KC_F4) , LSFT(KC_F5) , LSFT(KC_F6) , LSFT(KC_F7) , LSFT(KC_F8) , LSFT(KC_F9) , LSFT(KC_F10) , LSFT(KC_F11) ,
-            XXXXXXX   , XXXXXXX     , KC_LGUI     , KC_LALT     , XXXXXXX     , XXXXXXX     , KC_TRNS     , KC_LEFT     , KC_DOWN     , KC_RGHT
+            XXXXXXX   , KC_CAPSLOCK , KC_LGUI     , KC_LALT     , XXXXXXX     , XXXXXXX     , KC_TRNS     , KC_LEFT     , KC_DOWN     , KC_RGHT
             )
 
     ,
