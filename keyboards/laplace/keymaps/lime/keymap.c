@@ -15,7 +15,7 @@
 #define FN4 MO(_FN4)
 
 #define OSL2 OSL(_FN2)
-#define OSL3 OSL(_FN2)
+#define OSL3 OSL(_FN3)
 
 #define ESC_FN1 LT(_FN1, KC_ESCAPE)
 #define ESC_FN2 LT(_FN2, KC_ESCAPE)
@@ -27,7 +27,7 @@
 #define BS_FN1 LT(_FN1, KC_BSPC)
 #define BS_FN2 LT(_FN2, KC_BSPC)
 
-            /* , */
+/* , */
 /*         [] = LAYOUT( */
 /*         XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX , XXXXXXX    , XXXXXXX , XXXXXXX   , XXXXXXX , */
 /*         KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX , XXXXXXX    , XXXXXXX , XXXXXXX   , */
@@ -35,16 +35,12 @@
 /*         XXXXXXX, XXXXXXX, KC_LGUI , KC_LALT , XXXXXXX , XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX , XXXXXXX */
 /*         ) */
 
-/*                           , [_FN3] = LAYOUT( Layout for LGUI + Number*/
-/*                           , [_FN3] = LAYOUT( OSL Layout for Shift + number */
-/* Numpad togglable layer */
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_BASE] = LAYOUT(
             KC_TAB  , KC_Q , KC_W    , KC_E    , KC_R    , KC_T      , KC_Y     , KC_U     , KC_I    , KC_O      , KC_P    , KC_BSLS   , KC_BSPC ,
             KC_LCTL , KC_A , KC_S    , KC_D    , KC_F    , KC_G      , KC_H     , KC_J     , KC_K    , KC_L      , KC_SCLN , KC_QUOT   ,
-            KC_LSFT , KC_Z , KC_X    , KC_C    , KC_V    , KC_B      , KC_N     , KC_M     , KC_COMM , KC_DOT    , KC_SLSH , ENTER_FN2 ,
+            KC_LSFT , KC_Z , KC_X    , KC_C    , KC_V    , KC_B      , KC_N     , KC_M     , KC_COMM , KC_DOT    , KC_SLSH , KC_ENT ,
             FN1     , OSL2 , KC_LGUI , KC_LALT , ESC_FN2 , SPACE_FN3 , TG(_FN4) , KC_GRAVE , OSL3    , ENTER_FN2
             )
 
@@ -61,15 +57,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_TAB   , KC_1       , KC_2       , KC_3       , KC_4       , KC_5       , KC_6       , KC_7       , KC_8       , KC_9       , KC_0       , KC_MINS , KC_EQL ,
             KC_LCTL  , LGUI(KC_1) , LGUI(KC_2) , LGUI(KC_3) , LGUI(KC_4) , LGUI(KC_5) , LGUI(KC_6) , LGUI(KC_7) , LGUI(KC_8) , LGUI(KC_9) , LGUI(KC_0) , KC_ENT  ,
             KC_LSFT  , _______    , _______    , _______    , _______    , _______    , _______    , _______    , _______    , _______    , KC_PAST    , KC_RSFT,
-            XXXXXXX  , _______    , KC_LGUI    , KC_LALT    , _______    , _______    , _______    , _______    , _______    , _______
+            _______  , _______    , KC_LGUI    , KC_LALT    , _______    , _______    , _______    , _______    , _______    , _______
             )
 
     ,
     [_FN3] = LAYOUT(
             KC_ESCAPE , KC_F1       , KC_F2       , KC_F3       , KC_F4       , KC_F5       , KC_F6       , KC_F7       , KC_F8       , KC_F9       , KC_F10       , KC_F11       , KC_F12 ,
-            KC_LCTL   , LCTL(KC_F1) , LCTL(KC_F2) , LCTL(KC_F3) , LCTL(KC_F4) , LCTL(KC_F5) , LCTL(KC_F6) , LCTL(KC_F7) , LCTL(KC_F8) , LCTL(KC_F9) , LCTL(KC_F10) , LCTL(KC_F11) ,
-            KC_LSFT   , LSFT(KC_F1) , LSFT(KC_F2) , LSFT(KC_F3) , LSFT(KC_F4) , LSFT(KC_F5) , LSFT(KC_F6) , LSFT(KC_F7) , LSFT(KC_F8) , LSFT(KC_F9) , LSFT(KC_F10) , LSFT(KC_F11) ,
-            XXXXXXX   , KC_CAPSLOCK , KC_LGUI     , KC_LALT     , XXXXXXX     , XXXXXXX     , KC_TRNS     , KC_LEFT     , KC_DOWN     , KC_RGHT
+            KC_LALT   , LALT(KC_F1) , LALT(KC_F2) , LALT(KC_F3) , LALT(KC_F4) , LALT(KC_F5) , LALT(KC_F6) , LALT(KC_F7) , LALT(KC_F8) , LALT(KC_F9) , LALT(KC_F10) , LALT(KC_F11) ,
+            KC_LGUI   , LGUI(KC_F1) , LGUI(KC_F2) , LGUI(KC_F3) , LGUI(KC_F4) , LGUI(KC_F5) , LGUI(KC_F6) , LGUI(KC_F7) , LGUI(KC_F8) , LGUI(KC_F9) , LGUI(KC_F10) , LGUI(KC_F11) ,
+            _______   , KC_CAPSLOCK , KC_LGUI     , KC_LALT     , _______     , _______     , KC_LEFT     , KC_DOWN     , KC_UP     , KC_RGHT
             )
 
     ,
@@ -77,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_TAB   , KC_F1   , KC_F2   , KC_F3   , KC_F4   , _______ , KC_PAST , KC_7    , KC_8    , KC_9    , KC_EQL  , KC_DEL , KC_BSPC ,
             KC_LCTL  , KC_F5   , KC_F6   , KC_F7   , KC_F8   , _______ , KC_SLSH , KC_4    , KC_5    , KC_6    , KC_MINS , KC_ENT ,
             KC_LSFT  , KC_F9   , KC_F10  , KC_F11  , KC_F12  , _______ , KC_DOT  , KC_1    , KC_2    , KC_3    , KC_UP   , KC_TAB ,
-            XXXXXXX  , XXXXXXX , KC_LGUI , KC_LALT , _______ , KC_0    , _______ , KC_LEFT , KC_DOWN , KC_RGHT
+            _______  , _______ , KC_LGUI , KC_LALT , _______ , KC_0    , _______ , KC_LEFT , KC_DOWN , KC_RGHT
             )
 
 
