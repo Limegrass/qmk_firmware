@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     ,
     [_FN2] = LAYOUT(
-            KC_TAB   , KC_1       , KC_2       , KC_3       , KC_4       , KC_5       , KC_6       , KC_7       , KC_8       , KC_9       , KC_0       , KC_MINS , KC_EQL ,
+            KC_EQL   , KC_1       , KC_2       , KC_3       , KC_4       , KC_5       , KC_6       , KC_7       , KC_8       , KC_9       , KC_0       , KC_MINS , KC_BSPC ,
             KC_LCTL  , LGUI(KC_1) , LGUI(KC_2) , LGUI(KC_3) , LGUI(KC_4) , LGUI(KC_5) , LGUI(KC_6) , LGUI(KC_7) , LGUI(KC_8) , LGUI(KC_9) , LGUI(KC_0) , KC_ENT  ,
             KC_LSFT  , _______    , _______    , _______    , _______    , _______    , _______    , _______    , _______    , _______    , KC_PAST    , KC_RSFT,
             _______  , _______    , KC_LGUI    , KC_LALT    , _______    , _______    , _______    , _______    , _______    , _______
