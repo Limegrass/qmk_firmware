@@ -46,8 +46,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     ,
     [_FN1] = LAYOUT(
-            KC_GRAVE , _______ , _______ , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , _______ , _______ , _______ , KC_HOME    , KC_END  , KC_PGUP , KC_PGDN , KC_DEL ,
-            KC_LCTL  , KC_RCTL , _______ , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , _______ , KC_LEFT , KC_DOWN , KC_UP      , KC_RGHT , KC_INS  , KC_ENT  ,
+            KC_GRAVE , _______ , KC_PLUS , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , _______ , _______ , _______ , KC_HOME    , KC_END  , KC_PGUP , KC_PGDN , KC_DEL ,
+            KC_LCTL  , KC_RCTL , KC_UNDERSCORE , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , _______ , KC_LEFT , KC_DOWN , KC_UP      , KC_RGHT , KC_INS  , KC_ENT  ,
             KC_LSFT  , KC_RSFT , _______ , KC_LBRC             , KC_RBRC              , _______ , _______ , _______ , KC_PSCREEN , KC_MUTE , KC_VOLD , KC_VOLU ,
             _______  , _______ , KC_LGUI , KC_LALT             , _______              , KC_MPLY , KC_MSTP , _______ , KC_MPRV    , KC_MNXT
             )
