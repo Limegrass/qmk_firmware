@@ -41,6 +41,8 @@
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
 )
 
+#define TAPPING_TERM 120
+
 #define RGB_DI_PIN E2
 #define RGBLIGHT_ANIMATIONS
 #define RGBLED_NUM 16
