@@ -1,13 +1,16 @@
 #pragma once
+#ifndef CONFIG_H
+#define CONFIG_H
 
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0x445A  // "DZ"
+#define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x2260
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    KBDFans
 #define PRODUCT         DZ60
+#define DESCRIPTION     DZ60 Keyboard
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -37,6 +40,7 @@
 #define BACKLIGHT_LEVELS 5
 
 #define RGB_DI_PIN E2
+#define DEBOUNCING_DELAY 5
 #ifdef RGB_DI_PIN
 #    define RGBLIGHT_ANIMATIONS
 #    define RGBLED_NUM 16
@@ -54,5 +58,19 @@
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
-/* VIA related config */
 #define VIA_EEPROM_LAYOUT_OPTIONS_SIZE 2
+/* key combination for command */
+#define IS_COMMAND() ( \
+    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
+)
+
+#define TAPPING_TERM 120
+
+#define RGB_DI_PIN E2
+#define RGBLIGHT_ANIMATIONS
+#define RGBLED_NUM 16
+#define RGBLIGHT_HUE_STEP 8
+#define RGBLIGHT_SAT_STEP 8
+#define RGBLIGHT_VAL_STEP 8
+
+#endif
