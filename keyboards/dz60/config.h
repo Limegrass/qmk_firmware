@@ -39,19 +39,8 @@
 #define BACKLIGHT_PIN B6
 #define BACKLIGHT_LEVELS 5
 
-#define RGB_DI_PIN E2
-#define DEBOUNCING_DELAY 5
-#ifdef RGB_DI_PIN
-#    define RGBLIGHT_ANIMATIONS
-#    define RGBLED_NUM 16
-#    define RGBLIGHT_HUE_STEP 8
-#    define RGBLIGHT_SAT_STEP 8
-#    define RGBLIGHT_VAL_STEP 8
-#    define RGBLIGHT_SLEEP
-#endif
-
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
+/* Set 0 if debouncing isn't needed */
+#define DEBOUNCING_DELAY 0
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
@@ -64,7 +53,10 @@
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
 )
 
-#define TAPPING_TERM 133
+#define TAPPING_TERM 120
+
+#define ONESHOT_TAP_TOGGLE 5  /* Tapping this number of times holds the key until tapped once again. */
+#define ONESHOT_TIMEOUT 333  /* Time (in ms) before the one shot key is released */
 
 #define RGB_DI_PIN E2
 #define RGBLIGHT_ANIMATIONS
@@ -72,5 +64,7 @@
 #define RGBLIGHT_HUE_STEP 8
 #define RGBLIGHT_SAT_STEP 8
 #define RGBLIGHT_VAL_STEP 8
+
+#define RETRO_TAPPING
 
 #endif
