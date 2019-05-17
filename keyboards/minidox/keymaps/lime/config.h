@@ -8,8 +8,6 @@
 
 #define TAPPING_TERM 120
 #define RETRO_TAPPING
-#define TAP_DANCE
-#define EE_HANDS	
-/* #define MASTER_RIGHT */
+#define MASTER_RIGHT
 
 #endif
