@@ -1,5 +1,9 @@
-#ifndef TAP_H
-#define TAP_H
+#ifndef LIME_TAPDANCE_H
+#define LIME_TAPDANCE_H
+#include "quantum.h"
+enum TDKeys {
+    TD_SPACE_ENTER_SHIFT = 0
+};
 int evaluate_taps (qk_tap_dance_state_t *state);
 int evaluate_single_tap_action (qk_tap_dance_state_t *state);
 int evaluate_double_tap_action (qk_tap_dance_state_t *state);

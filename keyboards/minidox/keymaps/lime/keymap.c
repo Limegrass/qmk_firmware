@@ -1,6 +1,5 @@
 #include QMK_KEYBOARD_H
-#include "tap.h"
-#include "keyactions.h"
+#include "tapdance.h"
 
 #define _QWERTY 0
 #define _NUM 1
@@ -14,16 +13,9 @@
 #define ENTER_CTRL LCTL_T(KC_ENTER)
 #define BACK_ALT LALT_T(KC_BSPC)
 
-
-enum TDKeys {
-    TD_SPACE_ENTER_SHIFT = 0
-};
-
-qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_SPACE_ENTER_SHIFT]     = ACTION_TAP_DANCE_FN_ADVANCED(NULL,
-                                                       space_enter_shift_finished,
-                                                       space_enter_shift_reset)
-};
+/* Make TAB_CODE into the leader key, */
+/*      move TAB into leader esc, move enter into leader space */
+/*      create a bind for ctrl/alt tabbing with leader if possible */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 

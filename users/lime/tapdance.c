@@ -1,11 +1,23 @@
-#include "keyactions.h"
+#include "tapdance.h"
 #include "quantum.h"
+
+enum KeyActions {
+    TAP = 1,
+    HOLD = 2,
+    DOUBLE_TAP = 3,
+    TAP_HOLD = 4,
+    TWO_SINGLE_TAPS = 5,
+};
 
 int evaluate_single_tap_action(qk_tap_dance_state_t *state){
     if(state->pressed){
         return HOLD;
     }
     return TAP;
+    /* if(state->interrupted || !state->pressed){ */
+    /*     return TAP; */
+    /* } */
+    /* return HOLD; */
 }
 
 int evaluate_double_tap_action(qk_tap_dance_state_t *state){
@@ -56,7 +68,11 @@ void space_enter_shift_reset(qk_tap_dance_state_t *state, void *user_data){
             unregister_code(KC_SPACE);
             break;
         case HOLD:
-            unregister_mods(MOD_BIT(KC_LSFT));
+           unregister_mods(MOD_BIT(KC_LSFT));
+            if(!state->interrupted){
+               register_code(KC_SPACE);
+               unregister_code(KC_SPACE);
+            }
             break;
         case DOUBLE_TAP:
             unregister_code(KC_ENTER);
@@ -67,3 +83,8 @@ void space_enter_shift_reset(qk_tap_dance_state_t *state, void *user_data){
     }
 }
 
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [TD_SPACE_ENTER_SHIFT]     = ACTION_TAP_DANCE_FN_ADVANCED(NULL,
+                                                              space_enter_shift_finished,
+                                                              space_enter_shift_reset)
+};
