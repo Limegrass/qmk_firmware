@@ -46,8 +46,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = LAYOUT( \
   KC_Q , KC_W , KC_E , KC_R , KC_T , KC_Y , KC_U , KC_I    , KC_O   , KC_BSPC , \
   KC_A , KC_S , KC_D , KC_F , KC_G , KC_H , KC_J , KC_K    , KC_L   , KC_P , \
-  LCTL_T(KC_Z) , LALT_T(KC_X) , KC_C , KC_V , KC_B , KC_N , KC_M , KC_COMM , RALT_T(KC_DOT) , RCTL_T(KC_SLASH), \
-         ENTER_LGUI, TAB_CODE,  ESC_NUM ,       LSFT_T(KC_SPACE)  , ENTER_CODE , MO(_FKEY) \
+  KC_Z,  KC_X , KC_C , KC_V , KC_B , KC_N , KC_M , LT(_CODE, KC_COMM) , RALT_T(KC_DOT) , RCTL_T(KC_SLASH), \
+         KC_LCTL, TAB_CODE,  ESC_NUM ,       LSFT_T(KC_SPACE)  , ENTER_LGUI , MO(_FKEY) \
 ),
 
 /* Raise
@@ -112,8 +112,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_FKEY] =  LAYOUT( \
   KC_F1   , KC_F2   , KC_F3   , KC_F4   , KC_F5   , KC_F6   , KC_F7   , KC_F8   , KC_F9   , KC_F10  , \
-  _______ , _______ , _______ , _______ , KC_F11  , KC_F12  , _______ , _______ , _______ , _______ , \
-  _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , LALT(KC_DOT) , LCTL(KC_SLASH) , \
+  KC_F11, KC_F12, _______ , SGUI(KC_UP) ,  _______  , LCTL(KC_LEFT)  , LCTL(KC_UP) , LCTL(KC_DOWN) , LCTL(KC_RIGHT) ,  _______ , \
+  _______ ,_______ ,SGUI(KC_LEFT)  ,  SGUI(KC_DOWN) , SGUI(KC_RIGHT) ,  _______ , _______ , _______ , LALT(KC_DOT) , LCTL(KC_SLASH) , \
                     _______, _______, _______,      LSFT(KC_SPACE),  _______, _______                   \
 ),
 
