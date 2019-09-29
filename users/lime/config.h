@@ -11,7 +11,7 @@
 #define TAPPING_TERM 120
 #define RETRO_TAPPING
 
-#define MOUSEKEY_DELAY             100
+#define MOUSEKEY_DELAY             0
 #define MOUSEKEY_INTERVAL          5
 #define MOUSEKEY_MAX_SPEED         1
 #define MOUSEKEY_TIME_TO_MAX       0
