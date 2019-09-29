@@ -47,8 +47,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             FN1     , OSL3 , KC_LGUI , KC_LALT , ESC_FN2 , SPACE_FN3 , LALT(KC_GRAVE) , TT(_FN4) , KC_APP  , FN4)   ,
 
     [_FN1] = LAYOUT(
-            KC_GRAVE , KC_PIPE  , KC_BSLASH       , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_UNDERSCORE , _______ , _______ , KC_PGDN    , KC_HOME  , KC_END  , KC_PGUP , KC_DEL ,
-            KC_RCTRL  , KC_TILDE , KC_UNDERSCORE   , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , KC_PLUS       , KC_LEFT , KC_DOWN , KC_UP      , KC_RGHT  , KC_INS  , KC_ENT  ,
+            KC_GRAVE , KC_PIPE  , KC_BSLASH       , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_UNDERSCORE , _______ , KC_PGDN , KC_HOME    , KC_END   , KC_PGUP , _______ , KC_DEL ,
+            KC_RCTRL , KC_TILDE , KC_UNDERSCORE   , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , KC_PLUS       , KC_LEFT , KC_DOWN , KC_UP      , KC_RGHT  , KC_INS  , KC_ENT  ,
             KC_LSFT  , KC_QUOTE , KC_DOUBLE_QUOTE , KC_LBRC             , KC_RBRC              , _______       , _______ , _______ , KC_PSCREEN , KC_MUTE  , KC_VOLD , KC_VOLU ,
             _______  , _______  , KC_LGUI         , KC_LALT             , _______              , _______       , KC_MPRV , KC_MPLY , KC_MSTP    , KC_MNXT) ,
 
