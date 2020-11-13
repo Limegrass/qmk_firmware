@@ -28,24 +28,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-------------------------------------------------------------------------'
      */
     [_BASE] = LAYOUT(
-            KC_TAB      , KC_Q           , KC_W    , KC_E    , KC_R    , KC_T     , KC_Y       , KC_U           , KC_I          , KC_O   , KC_P          , KC_BSPC  ,
-            KC_LCTRL    , KC_A           , KC_S    , KC_D    , KC_F    , KC_G     , KC_H       , KC_J           , KC_K          , KC_L   , KC_SCLN       , KC_QUOTE ,
-            KC_LSFT     , KC_Z           , KC_X    , KC_C    , KC_V    , KC_B     , KC_N       , KC_M           , KC_COMM       , KC_DOT , KC_SLSH       , KC_RSFT  ,
-            MO(_MOTION) , OSL(_FUNCTION) , KC_LGUI , KC_LALT , ESC_NUM , KC_SPACE , ENTER_FUNC , KC_RALT        , TT(_HARDWARE) , APP_GUI , TT(_HARDWARE)
+            KC_TAB        , KC_Q           , KC_W    , KC_E    , KC_R    , KC_T     , KC_Y       , KC_U    , KC_I          , KC_O    , KC_P          , KC_BSPC       ,
+            KC_LCTRL      , KC_A           , KC_S    , KC_D    , KC_F    , KC_G     , KC_H       , KC_J    , KC_K          , KC_L    , KC_SCLN       , KC_QUOTE      ,
+            OSM(MOD_LSFT) , KC_Z           , KC_X    , KC_C    , KC_V    , KC_B     , KC_N       , KC_M    , KC_COMM       , KC_DOT  , KC_SLSH       , OSM(MOD_RSFT) ,
+            MO(_MOTION)   , OSL(_FUNCTION) , KC_LGUI , KC_LALT , ESC_NUM , KC_SPACE , ENTER_FUNC , KC_RALT , TT(_HARDWARE) , APP_GUI , TT(_HARDWARE)
             ),
 
     [_WORKMAN] = LAYOUT(
-            KC_TAB      , KC_Q           , KC_D    , KC_R    , KC_W    , KC_B     , KC_J       , KC_F           , KC_U          , KC_P   , KC_SCLN       , KC_BSPC  ,
-            KC_LCTRL    , KC_A           , KC_S    , KC_H    , KC_T    , KC_G     , KC_Y       , KC_N           , KC_E          , KC_O   , KC_I          , KC_QUOTE   ,
-            KC_LSFT     , KC_Z           , KC_X    , KC_M    , KC_C    , KC_V     , KC_K       , KC_L           , KC_COMM       , KC_DOT , KC_SLSH       , KC_RSFT  ,
-            MO(_MOTION) , OSL(_FUNCTION) , KC_LGUI , KC_LALT , ESC_NUM , KC_SPACE , ENTER_FUNC , KC_RALT        , TT(_HARDWARE) , APP_GUI , TT(_HARDWARE)
-            ),
+            KC_TAB        , KC_Q           , KC_D    , KC_R    , KC_W    , KC_B     , KC_J       , KC_F    , KC_U          , KC_P    , KC_SCLN       , KC_BSPC       ,
+            KC_LCTRL      , KC_A           , KC_S    , KC_H    , KC_T    , KC_G     , KC_Y       , KC_N    , KC_E          , KC_O    , KC_I          , KC_QUOTE      ,
+            OSM(MOD_LSFT) , KC_Z           , KC_X    , KC_M    , KC_C    , KC_V     , KC_K       , KC_L    , KC_COMM       , KC_DOT  , KC_SLSH       , OSM(MOD_RSFT) ,
+            MO(_MOTION)   , OSL(_FUNCTION) , KC_LGUI , KC_LALT , ESC_NUM , KC_SPACE , ENTER_FUNC , KC_RALT , TT(_HARDWARE) , APP_GUI , TT(_HARDWARE)
+            )             ,
 
     [_MOTION] = LAYOUT(
-            KC_GRAVE , KC_PIPE  , KC_BSLASH       , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_UNDERSCORE , _______       , KC_PGUP , KC_HOME    , KC_END  , KC_PGDN  , KC_DEL  ,
-            KC_RCTRL , KC_TILDE , KC_UNDERSCORE   , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , KC_QUOTE      , KC_LEFT       , KC_DOWN , KC_UP      , KC_RGHT , KC_INS   , KC_ENT  ,
-            KC_LSFT  , KC_QUOTE , KC_DOUBLE_QUOTE , KC_LBRC             , KC_RBRC              , _______       , _______       , _______ , KC_PSCREEN , KC_MUTE , KC_VOLD  , KC_VOLU ,
-            _______  , _______  , KC_LGUI         , KC_LALT             , _______              , _______       , DF(_GAMEBASE) , KC_MPRV , KC_MPLY    , KC_MSTP , KC_MNXT
+            KC_GRAVE , KC_PIPE  , KC_BSLASH       , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_UNDERSCORE , _______ , KC_PGUP , KC_HOME    , KC_END  , KC_PGDN  , KC_DEL  ,
+            KC_RCTRL , KC_TILDE , KC_UNDERSCORE   , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , KC_QUOTE      , KC_LEFT , KC_DOWN , KC_UP      , KC_RGHT , KC_INS   , KC_ENT  ,
+            KC_LSFT  , KC_QUOTE , KC_DOUBLE_QUOTE , KC_LBRC             , KC_RBRC              , _______       , _______ , _______ , KC_PSCREEN , KC_MUTE , KC_VOLD  , KC_VOLU ,
+            _______  , _______  , KC_LGUI         , KC_LALT             , _______              , _______       , _______ , KC_MPRV , KC_MPLY    , KC_MSTP , KC_MNXT
             ),
 
     [_NUMBER] = LAYOUT(
@@ -63,10 +63,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             ),
 
     [_HARDWARE] = LAYOUT(
-            XXXXXXX , KC_MS_BTN1    , KC_MS_UP   , KC_MS_BTN2     , KC_MS_WH_UP   , _______      , XXXXXXX , XXXXXXX , XXXXXXX  , XXXXXXX , XXXXXXX            , XXXXXXX          ,
-            KC_LCTL , KC_MS_LEFT    , KC_MS_DOWN , KC_MS_RIGHT    , KC_MS_WH_DOWN , _______      , XXXXXXX , XXXXXXX , XXXXXXX  , XXXXXXX , XXXXXXX            , XXXXXXX          ,
-            KC_LSFT , KC_MS_WH_LEFT , KC_MS_BTN3 , KC_MS_WH_RIGHT , KC_MS_BTN4    , KC_MS_BTN5   , XXXXXXX , XXXXXXX , XXXXXXX  , XXXXXXX , KC_BRIGHTNESS_DOWN , KC_BRIGHTNESS_UP ,
-            RGB_TOG , RGB_MOD       , KC_LGUI    , KC_LALT        , DF(_BASE)     , DF(_WORKMAN) , RESET   , XXXXXXX , RESET    , XXXXXXX , RESET
+            XXXXXXX , KC_MS_BTN1    , KC_MS_UP   , KC_MS_BTN2     , KC_MS_WH_UP   , _______      , XXXXXXX          , XXXXXXX , XXXXXXX  , XXXXXXX , XXXXXXX            , RESET            ,
+            KC_LCTL , KC_MS_LEFT    , KC_MS_DOWN , KC_MS_RIGHT    , KC_MS_WH_DOWN , _______      , XXXXXXX          , XXXXXXX , XXXXXXX  , XXXXXXX , XXXXXXX            , XXXXXXX          ,
+            KC_LSFT , KC_MS_WH_LEFT , KC_MS_BTN3 , KC_MS_WH_RIGHT , KC_MS_BTN4    , KC_MS_BTN5   , XXXXXXX          , XXXXXXX , XXXXXXX  , XXXXXXX , KC_BRIGHTNESS_DOWN , KC_BRIGHTNESS_UP ,
+            RGB_TOG , RGB_MOD       , KC_LGUI    , KC_LALT        , DF(_BASE)     , DF(_WORKMAN) , DF(_GAMEBASE)    , XXXXXXX , RESET    , XXXXXXX , RESET
             ),
 
     [_GAMEBASE] = LAYOUT(
