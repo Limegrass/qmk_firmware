@@ -9,6 +9,7 @@
 #define _GAMEBASE 6
 #define _GAMENUMBER 7
 #define _GAMEFUNCTION 8
+#define _FPS 9
 
 #define APP_GUI MT(MOD_RGUI, KC_APP)
 #define ESC_NUM LT(_NUMBER , KC_ESCAPE)
@@ -66,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             XXXXXXX , KC_MS_BTN1    , KC_MS_UP   , KC_MS_BTN2     , KC_MS_WH_UP   , _______      , XXXXXXX          , XXXXXXX , XXXXXXX  , XXXXXXX , XXXXXXX            , RESET            ,
             KC_LCTL , KC_MS_LEFT    , KC_MS_DOWN , KC_MS_RIGHT    , KC_MS_WH_DOWN , _______      , XXXXXXX          , XXXXXXX , XXXXXXX  , XXXXXXX , XXXXXXX            , XXXXXXX          ,
             KC_LSFT , KC_MS_WH_LEFT , KC_MS_BTN3 , KC_MS_WH_RIGHT , KC_MS_BTN4    , KC_MS_BTN5   , XXXXXXX          , XXXXXXX , XXXXXXX  , XXXXXXX , KC_BRIGHTNESS_DOWN , KC_BRIGHTNESS_UP ,
-            RGB_TOG , RGB_MOD       , KC_LGUI    , KC_LALT        , DF(_BASE)     , DF(_WORKMAN) , DF(_GAMEBASE)    , XXXXXXX , RESET    , XXXXXXX , RESET
+            RGB_TOG , RGB_MOD       , KC_LGUI    , KC_LALT        , DF(_BASE)     , DF(_WORKMAN) , DF(_GAMEBASE)    , DF(_FPS) , RESET    , XXXXXXX , RESET
             ),
 
     [_GAMEBASE] = LAYOUT(
@@ -88,5 +89,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             _______  , KC_F5   , KC_F6   , KC_F7   , KC_F8   , _______ , _______   , _______ , _______ , _______ , _______  , _______ ,
             _______  , KC_F9   , KC_F10  , KC_F11  , KC_F12  , _______ , _______   , _______ , _______ , _______ , _______  , _______ ,
             _______  , _______ , _______ , _______ , _______ , _______ , DF(_BASE) , _______ , _______ , _______ , _______
+            ),
+
+    [_FPS] = LAYOUT(
+            KC_TAB   , KC_Q            , KC_W    , KC_E    , KC_R     , KC_T     , KC_Y             , KC_U       , KC_I           , KC_O      , KC_P       , KC_BSPC       ,
+            KC_LCTRL , KC_A            , KC_S    , KC_D    , KC_F     , KC_G     , KC_H             , KC_J       , KC_K           , KC_L      , KC_SCLN    , KC_QUOTE      ,
+            KC_LSFT  , KC_Z            , KC_X    , KC_C    , KC_V     , KC_B     , KC_N             , KC_M       , KC_COMM        , KC_DOT    , KC_SLSH    , KC_RSFT       ,
+            KC_LCTRL , MO(_GAMENUMBER) , KC_LGUI , KC_LALT , KC_SPACE , KC_SPACE , LT(_GAMEFUNCTION , KC_ENTER)  , KC_RALT        , DF(_BASE) , KC_ESCAPE  , TT(_HARDWARE)
             ),
 };
