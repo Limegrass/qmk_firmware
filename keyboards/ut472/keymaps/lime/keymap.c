@@ -5,7 +5,7 @@
 #define _MOTION 2
 #define _NUMBER 3
 #define _FUNCTION 4
-#define _HARDWARE 5
+#define _HARDWARE 15
 #define _GAMEBASE 6
 #define _GAMENUMBER 7
 #define _GAMEFUNCTION 8
