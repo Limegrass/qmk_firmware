@@ -1,7 +1,6 @@
 #ifndef CONFIG_USER_LIME_H
 #define CONFIG_USER_LIME_H
 
-#define ONESHOT_TAP_TOGGLE 5
 /* Time (in ms) before the one shot key is released */
 #define ONESHOT_TIMEOUT 333
 
