@@ -5,7 +5,7 @@
 
 enum layers {
     QWERTY,
-    WORKMAN,
+    ALT_LAYOUT,
     MOTION,
     NUMBER,
     FUNCTION,
@@ -28,13 +28,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MO(MOTION) , OSL(FUNCTION) , KC_LGUI , KC_LALT , ESC_NUM , KC_SPC , ENTER_FUNC    , KC_RALT , TT(HARDWARE) , APP_GUI , TT(HARDWARE)
     ),
 
-    [WORKMAN] = LAYOUT(
+    // Workman
+    [ALT_LAYOUT] = LAYOUT(
         KC_TAB     , KC_Q          , KC_D    , KC_R    , KC_W    , KC_B     , XXXXXXX    , KC_J    , KC_F         , KC_U    , KC_P         , KC_SCLN , KC_BSPC  ,
         KC_LCTL    , KC_A          , KC_S    , KC_H    , KC_T    , KC_G     , XXXXXXX    , KC_Y    , KC_N         , KC_E    , KC_O         , KC_I    , KC_QUOTE ,
         KC_LSFT    , KC_Z          , KC_X    , KC_M    , KC_C    , KC_V     , KC_K       , KC_L    , KC_COMM      , KC_DOT  , KC_SLSH      , KC_RSFT ,
         MO(MOTION) , OSL(FUNCTION) , KC_LGUI , KC_LALT , ESC_NUM , KC_SPACE , ENTER_FUNC , KC_RALT , TT(HARDWARE) , APP_GUI , TT(HARDWARE)
     ),
-
 
     [MOTION] = LAYOUT(
         KC_GRAVE , KC_PIPE  , KC_BACKSLASH    , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_UNDERSCORE , XXXXXXX , _______ , KC_PGUP , KC_HOME , KC_END  , KC_PGDN , KC_DEL ,
@@ -61,6 +61,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX , KC_MS_BTN1    , KC_MS_UP   , KC_MS_BTN2     , KC_MS_WH_UP   , _______     , XXXXXXX  , XXXXXXX      , XXXXXXX       , XXXXXXX , XXXXXXX            , XXXXXXX          , QK_BOOTLOADER ,
         KC_LCTL , KC_MS_LEFT    , KC_MS_DOWN , KC_MS_RIGHT    , KC_MS_WH_DOWN , _______     , XXXXXXX  , XXXXXXX      , XXXXXXX       , XXXXXXX , XXXXXXX            , XXXXXXX          , XXXXXXX       ,
         KC_LSFT , KC_MS_WH_LEFT , KC_MS_BTN3 , KC_MS_WH_RIGHT , KC_MS_BTN4    , KC_MS_BTN5  , XXXXXXX  , XXXXXXX      , XXXXXXX       , XXXXXXX , KC_BRIGHTNESS_DOWN , KC_BRIGHTNESS_UP ,
-        RGB_TOG , RGB_MOD       , KC_LGUI    , KC_LALT        , DF(QWERTY)    , DF(WORKMAN) , XXXXXXX  , XXXXXXX      , QK_BOOTLOADER , XXXXXXX , QK_BOOTLOADER
+        RGB_TOG , RGB_MOD       , KC_LGUI    , KC_LALT        , DF(QWERTY)    , DF(ALT_LAYOUT) , XXXXXXX  , XXXXXXX      , QK_BOOTLOADER , XXXXXXX , QK_BOOTLOADER
     ),
 };
