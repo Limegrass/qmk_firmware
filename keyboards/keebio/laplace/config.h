@@ -32,7 +32,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* #define MATRIX_COL_PINS {D1, F6, F7, B1, B3, B2, B6} */
 
 /* WS2812 RGB LED */
-#define RGB_DI_PIN D4
 #define RGBLIGHT_EFFECT_BREATHING
 #define RGBLIGHT_EFFECT_RAINBOW_MOOD
 #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
