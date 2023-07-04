@@ -47,17 +47,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_NUMBER] = LAYOUT_planck_mit(
-        KC_EQL  , KC_1       , KC_2       , KC_3       , KC_4       , KC_5       , KC_6       , KC_7       , KC_8       , KC_9       , KC_0       , KC_BSPC ,
-        OSM(MOD_LCTL) , LSFT(KC_1) , LSFT(KC_2) , LSFT(KC_3) , LSFT(KC_4) , LSFT(KC_5) , LSFT(KC_6) , LSFT(KC_7) , LSFT(KC_8) , KC_PLUS    , KC_MINUS   , KC_ENT  ,
-        OSM(MOD_LSFT) , LGUI(KC_1) , LGUI(KC_2) , LGUI(KC_3) , LGUI(KC_4) , LGUI(KC_5) , LGUI(KC_6) , LGUI(KC_7) , LGUI(KC_8) , LGUI(KC_9) , LGUI(KC_0) , OSM(MOD_RSFT) ,
-        _______ , _______    , OSM(MOD_LGUI)    , OSM(MOD_LALT)    , _______    , /* _______ , */ _______ , _______    , _______    , _______    , _______    , _______
+        KC_EQL        , KC_1       , KC_2          , KC_3          , KC_4       , KC_5       , KC_6       , KC_7       , KC_8       , KC_9       , KC_0       , KC_BSPC       ,
+        OSM(MOD_LCTL) , LSFT(KC_1) , LSFT(KC_2)    , LSFT(KC_3)    , LSFT(KC_4) , LSFT(KC_5) , LSFT(KC_6) , LSFT(KC_7) , LSFT(KC_8) , KC_PLUS    , KC_MINUS   , KC_ENT        ,
+        OSM(MOD_LSFT) , LGUI(KC_1) , LGUI(KC_2)    , LGUI(KC_3)    , LGUI(KC_4) , LGUI(KC_5) , LGUI(KC_6) , LGUI(KC_7) , LGUI(KC_8) , LGUI(KC_9) , LGUI(KC_0) , OSM(MOD_RSFT) ,
+        _______       , _______    , OSM(MOD_LGUI) , OSM(MOD_LALT) , _______    , /* _______ , */ _______ , _______    , _______    , _______    , _______    , _______
     ),
 
     [_FUNCTION] = LAYOUT_planck_mit(
-        KC_F12  , KC_F1        , KC_F2       , KC_F3       , KC_F4       , KC_F5       , KC_F6       , KC_F7       , KC_F8       , KC_F9       , KC_F10       , KC_F11       ,
-        OSM(MOD_LCTL)  , KC_1         , KC_2        , KC_3        , KC_4        , KC_5        , KC_6        , KC_7        , KC_8        , KC_9        , KC_0         , KC_ENT       ,
-        OSM(MOD_LSFT)  , LALT(KC_F1)  , LALT(KC_F2) , LALT(KC_F3) , LALT(KC_F4) , LALT(KC_F5) , LALT(KC_F6) , LALT(KC_F7) , LALT(KC_F8) , LALT(KC_F9) , LALT(KC_F10) , OSM(MOD_RSFT) ,
-        KC_RCTL , KC_CAPS_LOCK , OSM(MOD_LGUI)    , OSM(MOD_LALT)    , _______     , /* _______  , */ _______  , _______     , KC_LEFT     , KC_DOWN     , KC_UP        , KC_RGHT
+        KC_F12        , KC_F1        , KC_F2         , KC_F3         , KC_F4       , KC_F5       , KC_F6       , KC_F7       , KC_F8       , KC_F9       , KC_F10       , KC_F11        ,
+        OSM(MOD_LCTL) , KC_1         , KC_2          , KC_3          , KC_4        , KC_5        , KC_6        , KC_7        , KC_8        , KC_9        , KC_0         , KC_ENT        ,
+        OSM(MOD_LSFT) , LALT(KC_F1)  , LALT(KC_F2)   , LALT(KC_F3)   , LALT(KC_F4) , LALT(KC_F5) , LALT(KC_F6) , LALT(KC_F7) , LALT(KC_F8) , LALT(KC_F9) , LALT(KC_F10) , OSM(MOD_RSFT) ,
+        KC_RCTL       , KC_CAPS_LOCK , OSM(MOD_LGUI) , OSM(MOD_LALT) , _______     , /* _______  , */ _______  , _______     , KC_LEFT     , KC_DOWN     , KC_UP        , KC_RGHT
     ),
 
     [_HARDWARE] = LAYOUT_planck_mit(
