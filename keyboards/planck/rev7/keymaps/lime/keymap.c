@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_FUNCTION] = LAYOUT_planck_mit(
             KC_F12        , KC_F1        , KC_F2       , KC_F3       , KC_F4       , KC_F5       , KC_F6       , KC_F7       , KC_F8       , KC_F9       , KC_F10       , KC_F11       ,
-            KC_LCTL       , LGUI(KC_F1)  , LGUI(KC_F2) , LGUI(KC_F3) , LGUI(KC_F4) , LGUI(KC_F5) , LGUI(KC_F6) , LGUI(KC_F7) , LGUI(KC_F8) , LGUI(KC_F9) , LGUI(KC_F10) , LGUI(KC_F11) ,
+            KC_LCTL       , KC_1         , KC_2        , KC_3        , KC_4        , KC_5        , KC_6        , KC_7        , KC_8        , KC_9        , KC_0         , KC_ENT       ,
             KC_LSFT       , LALT(KC_F1)  , LALT(KC_F2) , LALT(KC_F3) , LALT(KC_F4) , LALT(KC_F5) , LALT(KC_F6) , LALT(KC_F7) , LALT(KC_F8) , LALT(KC_F9) , LALT(KC_F10) , LALT(KC_F11) ,
             KC_RCTL       , KC_CAPS_LOCK , KC_LGUI     , KC_LALT     , _______     , _______     , _______     , KC_LEFT     , KC_DOWN     , KC_UP       , KC_RGHT
             )             ,
